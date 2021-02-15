@@ -108,14 +108,8 @@ public class View implements EventHandler<KeyEvent>
             displayGameObj( gc, ball );   // Display the Ball
             displayGameObj( gc, bat  );   // Display the Bat
 
-            // *[2]****************************************************[2]*
-            // * Display the bricks that make up the game                 *
-            // * Fill in code to display bricks from the brick array      *
-            // * Remember only a visible brick is to be displayed         *
-            // ************************************************************
-            
-            
-            
+            // [2] Display bricks
+            for (GameObj obj : bricks) if (obj.visible) displayGameObj( gc, obj );
             
             // update the score
             infoText.setText("BreakOut: Score = " + score);
